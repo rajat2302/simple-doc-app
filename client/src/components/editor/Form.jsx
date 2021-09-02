@@ -328,7 +328,7 @@ export default function DocData() {
                 onClick={revertVersion}
                 className={classes.reverButton}
               >
-                Revert
+                Revert to this version
               </Button>
             </Paper>
           </Grid>
