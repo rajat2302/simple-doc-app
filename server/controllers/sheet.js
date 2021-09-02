@@ -1,5 +1,8 @@
 import SheetData from "../models/saveText.js";
 
+/* 
+*Api call to get all the docs 
+*/
 export const getSheets = async (req, res) => {
     try{
         const sheetText = await SheetData.find();
@@ -12,6 +15,9 @@ export const getSheets = async (req, res) => {
     }
 }
 
+/*
+* API call to get a single doc
+*/
 export const getSheet = async (req, res) => {
     try {
         const sheetName = req.params.sheetName;
@@ -26,6 +32,10 @@ export const getSheet = async (req, res) => {
     }
 }
 
+/*
+*API call to create a new Doc 
+*/
+
 export const createSheet = async (req, res) => {
     const sheet = req.body;
     console.log(sheet);
@@ -39,6 +49,9 @@ export const createSheet = async (req, res) => {
     }
 }
 
+/*
+* API to update Doc data
+*/
 export const updateSheet = async (req, res) => {
     try {
         const sheetName = req.params.sheetName;

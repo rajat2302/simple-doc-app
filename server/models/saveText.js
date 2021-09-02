@@ -1,19 +1,27 @@
 import mongoose from "mongoose";
 
+/*
+ * DB schema for data to save
+ */
 const sheetSchema = mongoose.Schema({
-    sheetName: String,
-    changes: [{
-        text: {
-            type: String,
-            default: " ",
-        },
-        dateData: {
-            type: Date,
-            default: new Date(),
-        }
-    }]
+  sheetName: String,
+  changes: [
+    {
+      text: {
+        type: String,
+        default: " ",
+      },
+      dateData: {
+        type: Date,
+        default: new Date(),
+      },
+    },
+  ],
 });
 
-const SheetData = mongoose.model('SheetData', sheetSchema);
+/*
+ * Model creation for node to use
+ */
+const SheetData = mongoose.model("SheetData", sheetSchema);
 
 export default SheetData;
