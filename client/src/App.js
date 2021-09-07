@@ -4,7 +4,7 @@ import DocData from './components/editor/Form';
 
 function App() {
   return (
-    <DocData></DocData>
+    <DocData/>
   );
 }
 

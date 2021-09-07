@@ -17,6 +17,15 @@ const sheetSchema = mongoose.Schema({
       },
     },
   ],
+  patchs: [
+    {
+      patch: [],
+      dateData: {
+        type: Date,
+        default: new Date(),
+      },
+    },
+  ],
 });
 
 /*

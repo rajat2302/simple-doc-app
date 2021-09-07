@@ -58,7 +58,7 @@ export const updateSheet = async (req, res) => {
         const sheetData = req.body;
         console.log(sheetName);
         console.log(sheetData);
-        const updateSheetData = await SheetData.updateOne({_id: sheetName}, {$set : {changes: sheetData}});
+        const updateSheetData = await SheetData.updateOne({_id: sheetName}, {$set : {patchs: sheetData}});
 
         console.log(updateSheetData);
         res.status(200).json(updateSheetData);
